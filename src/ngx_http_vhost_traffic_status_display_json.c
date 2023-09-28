@@ -557,7 +557,6 @@ ngx_http_vhost_traffic_status_display_set_upstream_group(ngx_http_request_t *r,
 
         /* groups */
         if (uscf->servers && !uscf->port) {
-            us = uscf->servers->elts;
 
             type = NGX_HTTP_VHOST_TRAFFIC_STATUS_UPSTREAM_UG;
 
