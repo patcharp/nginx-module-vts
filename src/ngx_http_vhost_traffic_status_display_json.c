@@ -521,9 +521,9 @@ ngx_http_vhost_traffic_status_display_set_upstream_group(ngx_http_request_t *r,
     unsigned                               type;
     ngx_int_t                              rc;
     ngx_str_t                              key, dst;
-    ngx_uint_t                             i, j, k;
+    ngx_uint_t                             i;
     ngx_rbtree_node_t                     *node;
-    ngx_http_upstream_server_t            *us, usn;
+    ngx_http_upstream_server_t            usn;
 
     ngx_http_upstream_rr_peer_t           *peer;
     ngx_http_upstream_rr_peers_t          *peers;
