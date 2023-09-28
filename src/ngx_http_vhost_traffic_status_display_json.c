@@ -676,6 +676,15 @@ not_supported:
 #endif
 
                     } else {
+
+#if (NGX_HTTP_UPSTREAM_CHECK)
+                        if (ngx_http_upstream_check_peer_down(j)) {
+                            usn.down = 1;
+                        } else {
+                            usn.down = 0;
+                        }
+#endif
+
 #if nginx_version > 1007001
                         buf = ngx_http_vhost_traffic_status_display_set_upstream_node(r, buf, &usn, NULL);
 #else
